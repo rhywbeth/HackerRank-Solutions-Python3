@@ -1,1 +1,27 @@
+#!/bin/python3
 
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+    c = len(arr)
+    p,n,z = 0,0,0
+    for i in arr:
+        if i>0:
+            p = p + 1
+        elif i<0:
+            n = n + 1
+        elif i==0:
+            z = z + 1
+    print('%5.6f \n %5.6f \n %5.6f'%(p/c,n/c,z/c))
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
