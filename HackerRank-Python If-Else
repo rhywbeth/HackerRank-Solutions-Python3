@@ -1,0 +1,9 @@
+N = int(input())
+if N%2 != 0:
+    print('Weird')
+if N%2 == 0 and N in [2,3,4,5]:
+    print('Not Weird')
+if N%2 == 0 and N in range(6,21):
+    print('Weird')
+if N%2 == 0 and N in range(21,101):
+    print('Not Weird')
