@@ -1,0 +1,21 @@
+N = int(input())
+
+students = []
+for i in range(2*N):
+    students.append(input().split())
+
+# create a dictionary
+grades = {}
+for i in range(0, len(students), 2):
+    grades[students[i][0]] = float(students[i+1][0])
+
+# find students with second last grades
+result = []
+second_last = sorted(set(grades.values()))[1]
+for s in grades.keys():
+    if grades[s] == second_last:
+        result.append(s)
+
+# sorting alphabetically
+for k in sorted(result):
+    print(k)
