@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    s = input()
+
+an, al, di, lo, up = 0, 0, 0, 0, 0
+for i in s:
+    if i.isalnum():
+        an = 1
+    if i.isalpha():
+        al = 1
+    if i.isdigit():
+        di = 1
+    if i.islower():
+        lo = 1
+    if i.isupper():
+        up = 1
+
+for ex in [an,al,di,lo,up]:
+    if ex == 1:
+        print('True')
+    else:
+        print('False')
